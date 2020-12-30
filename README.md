@@ -1,1 +1,1 @@
-# Node.js challenge from Coders Lab
+# Node.js learning
