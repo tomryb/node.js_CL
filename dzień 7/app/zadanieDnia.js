@@ -6,7 +6,7 @@ const fs = require("fs");
 
 const app = express();
 
-app.use(bodyParser.urlencoded());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('./public/zadanieDnia/'));
 
 const dbFile = "./data/zadanieDnia/db.json";
@@ -46,7 +46,7 @@ app.post("/todos/clear", () => {
    saveToDos();
 });
 
-app.listen(3000);
+app.listen(3000, () => console.log("Słuchanko na 3000"));
 
 
 function deleteToDos(id) {
